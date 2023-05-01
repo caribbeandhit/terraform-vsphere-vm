@@ -2,7 +2,7 @@
 variable "network" {
   description = "Define PortGroup and IPs/CIDR for each VM. If no CIDR provided, the subnet mask is taken from var.ipv4submask."
   type        = map(list(string))
-  default     = "IaaS_Management"
+  default     = {}
 }
 
 variable "network_type" {
