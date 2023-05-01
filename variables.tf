@@ -132,6 +132,7 @@ variable "staticvmname" {
 
 variable "vmtemp" {
   description = "WIN-2019-Template"
+  default     = "WIN-2019-Template"
 }
 
 variable "content_library" {
@@ -173,6 +174,7 @@ variable "ram_size" {
 
 variable "dc" {
   description = "is01vcl001.iaas01.local"
+  default = "is01vcl001.iaas01.local"
 }
 
 variable "vmrpid" {
