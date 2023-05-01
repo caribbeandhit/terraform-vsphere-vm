@@ -174,6 +174,7 @@ variable "ram_size" {
 
 variable "dc" {
   description = "Name of the datacenter you want to deploy the VM to."
+  default     = "is01vcl001.iaas01.local"
 }
 
 variable "vmrpid" {
