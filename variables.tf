@@ -2,7 +2,7 @@
 variable "network" {
   description = "Define PortGroup and IPs/CIDR for each VM. If no CIDR provided, the subnet mask is taken from var.ipv4submask."
   type        = map(list(string))
-  default     = {"IaaS_Management"}
+  default     = "IaaS_Management"
 }
 
 variable "network_type" {
@@ -37,7 +37,7 @@ variable "data_disk" {
 variable "disk_label" {
   description = "Storage data disk labels."
   type        = list(any)
-  default     = [root]
+  default     = []
 }
 
 variable "disk_size_gb" {
