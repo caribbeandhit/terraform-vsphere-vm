@@ -336,12 +336,12 @@ variable "windomain" {
 
 variable "domain_admin_user" {
   description = "Domain admin user to join the server to AD.(Required) when using join_windomain option."
-  default     = svc_morpheus
+  default     = "svc_morpheus"
 }
 
 variable "domain_admin_password" {
   description = "Doamin User pssword to join the server to AD.(Required) when using join_windomain option."
-  default     = m0rph3usP@ssw0rd123
+  default     = "m0rph3usP@ssw0rd123"
 }
 
 variable "orgname" {
