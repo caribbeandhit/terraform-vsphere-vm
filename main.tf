@@ -75,7 +75,14 @@ locals {
   interface_count     = length(var.ipv4submask) #Used for Subnet handeling
   template_disk_count = var.content_library == null ? length(data.vsphere_virtual_machine.template[0].disks) : 0
 }
+provider "vsphere" {
+  user           = "svc_morpheus"
+  password       = "m0rph3usP@ssw0rd123"
+  vsphere_server = "is01vcl001.iaas01.local"
 
+  # if you have a self-signed cert
+  allow_unverified_ssl = true
+}
 // Cloning a Linux or Windows VM from a given template.
 resource "vsphere_virtual_machine" "vm" {
   count      = var.instances
