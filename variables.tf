@@ -2,7 +2,7 @@
 variable "network" {
   description = "Define PortGroup and IPs/CIDR for each VM. If no CIDR provided, the subnet mask is taken from var.ipv4submask."
   type        = map(list(string))
-  default     = {}
+  default     = {"IaaS_Management"}
 }
 
 variable "network_type" {
@@ -25,7 +25,7 @@ variable "datastore_cluster" {
 
 variable "datastore" {
   description = "Datastore to deploy the VM."
-  default     = ""
+  default     = "MGTDS001"
 }
 
 variable "data_disk" {
@@ -37,7 +37,7 @@ variable "data_disk" {
 variable "disk_label" {
   description = "Storage data disk labels."
   type        = list(any)
-  default     = []
+  default     = [root]
 }
 
 variable "disk_size_gb" {
@@ -131,7 +131,7 @@ variable "staticvmname" {
 }
 
 variable "vmtemp" {
-  description = "Name of the template available in the vSphere."
+  description = "WIN-2019-Template"
 }
 
 variable "content_library" {
@@ -172,7 +172,7 @@ variable "ram_size" {
 }
 
 variable "dc" {
-  description = "Name of the datacenter you want to deploy the VM to."
+  description = "is01vcl001.iaas01.local"
 }
 
 variable "vmrpid" {
@@ -182,7 +182,7 @@ variable "vmrpid" {
 
 variable "vmrp" {
   description = "Cluster resource pool that VM will be deployed to. you use following to choose default pool in the cluster (esxi1) or (Cluster)/Resources."
-  default     = ""
+  default     = "Resources/Morpheus-RG"
 }
 
 variable "vmfolder" {
