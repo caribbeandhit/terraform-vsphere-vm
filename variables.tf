@@ -173,8 +173,7 @@ variable "ram_size" {
 }
 
 variable "dc" {
-  description = "is01vcl001.iaas01.local"
-  default = "is01vcl001.iaas01.local"
+  description = "Name of the datacenter you want to deploy the VM to."
 }
 
 variable "vmrpid" {
